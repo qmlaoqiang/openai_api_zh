@@ -1,5 +1,6 @@
 # openai_api_zh
 openAI API中文版
+> 译者注：chatGPT的诞生，译者认为是一项划时代的创新。基于OpenAI API可以构建出很多有趣的应用，为了方便英文基础不是很好的同学，我尝试翻译OpenAI API的中文版。初次翻译，很多东西译者理解也不是很深刻，因此难免有很多错误，还请读者谅解、海涵。我会不断优化该翻译，并及时将已经完成翻译的章节放到这里。
 ## 简介
 ### 概览
 OpenAI的API可被用于任何涉及自然语言理解和生成的任务。我们提供一系列不同功能等级的模型以适配您各种场景，甚至于提供模型微调（fine-tune）的能力以让您可以充分定制您的模型。
@@ -54,6 +55,20 @@ Completion：Midnight Shadow.
 制作好的指令对于获得好的结果非常重要，但有时候也还不够。让我们尝试把上面的指令更丰富一点吧。
 Prompt：Suggest three names for a horse that is a superhero.  
 Completion：1. Thunderhoof   2. Gallop Guardian   3. Mane Marvel   
-这个回答好像并不是非常符合我们的需要。
+这个回答好像并不是非常符合我们的需要。这些名字非常普通，看上去模型并没有注意到我们是想给一匹马起名字（而是当做普通的动物）。我们是否可以提供一些相关的建议呢？  
+通常来讲，向模型告知并通过示例展示你想要的结果是很有意义的。输入提示里添加一下示例可以让你更好的与模型进行沟通。让我们尝试给输入添加一些示例吧。
+Prompt：
+Suggest three names for an animal that is a superhero.
+Animal: Cat
+Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
+Animal: Dog
+Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
+Animal: Horse
+Names: The Galloping Guardian, Mighty Mustang, Super Stallion
+
+Completion：
+非常棒！通过在输入提示里添加一些示例可以更好地帮助模型给我们提供我们想要的答案。  
+3. 调整你的设置   
+(未完待续)
 
 
