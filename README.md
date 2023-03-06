@@ -1,6 +1,7 @@
 # openai_api_zh
 OpenAI API中文版，原始英文版请参考：https://platform.openai.com/docs/introduction/overview
 > 译者注：chatGPT的诞生，译者认为是一项划时代的创新。基于OpenAI API可以构建出很多有趣的应用，为了方便英文基础不是很好的同学，我尝试翻译OpenAI API的中文版。初次翻译，很多东西译者理解也不是很深刻，因此难免有很多错误，还请读者谅解、海涵。我会不断优化该翻译，并及时将已经完成翻译的章节放到这里。
+# 开始
 ## 简介
 ### 概览
 OpenAI的API可被用于任何涉及自然语言理解和生成的任务。我们提供一系列不同功能等级的模型以适配您各种场景，甚至于提供模型微调（fine-tune）的能力以让您可以充分定制您的模型。
@@ -42,7 +43,7 @@ completions endpoin（这个词笔者实在找不到合适的反应，只好照�
 Prompt：Write a tagline for an ice cream shop.    
 Completion: We serve up smiles with every scoop!
 你可以把这当做是一个非常先进的自动补全——背后的模型将处理你输入的文本提示，然后预测出最匹配这个提示的答案。
-1. 通过一个指令开始
+1. 通过一个指令开始  
 假设你想创建一个给宠物起名字的应用。从一堆杂乱的字典里构造一个合适的名字是一件困难的事情。  
 首先，你需要提供一个能够清楚表达你所想的描述。让我们用一个指令来开始。通过给出一个提示来得到你的第一个回答。
 Prompt：Suggest one name for a horse.
@@ -51,12 +52,12 @@ Completion：How about the name "Thunderbolt"?
 Prompt：Suggest one name for a black horse.  
 Completion：Midnight Shadow.  
 如你所见，在输入的提示里添加一个形容词，就改变了返回的结果。设计输入提示的本质是你准备怎么“操作”背后的模型。  
-2. 添加一下示例
+2. 添加一下示例  
 制作好的指令对于获得好的结果非常重要，但有时候也还不够。让我们尝试把上面的指令更丰富一点吧。
 Prompt：Suggest three names for a horse that is a superhero.  
 Completion：1. Thunderhoof   2. Gallop Guardian   3. Mane Marvel   
 这个回答好像并不是非常符合我们的需要。这些名字非常普通，看上去模型并没有注意到我们是想给一匹马起名字（而是当做普通的动物）。我们是否可以提供一些相关的建议呢？  
-通常来讲，向模型告知并通过示例展示你想要的结果是很有意义的。输入提示里添加一下示例可以让你更好的与模型进行沟通。让我们尝试给输入添加一些示例吧。
+通常来讲，向模型告知并通过示例展示你想要的结果是很有意义的。输入提示里添加一下示例可以让你更好的与模型进行沟通。让我们尝试给输入添加一些示例吧。  
 Prompt：
 Suggest three names for an animal that is a superhero.
 Animal: Cat
@@ -66,9 +67,33 @@ Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
 Animal: Horse
 Names: The Galloping Guardian, Mighty Mustang, Super Stallion
 
-Completion：
+  Completion：      
+  
 非常棒！通过在输入提示里添加一些示例可以更好地帮助模型给我们提供我们想要的答案。  
 3. 调整你的设置   
-(未完待续)
-
-
+> 译者注：待翻译
+4. 构建你的应用
+- NodeJS版本
+现在你已经知道怎么提供一个好的输入提示和相关设置了，那就可以开始构建这个给宠物起名的应用了。这里我们提供一些代码帮助你开始，你可以跟随下面的步骤下载相关代码，然后运行你的应用。
+* 安装
+如果你的环境里还没有安装Node.js，请参考https://nodejs.org/en/ 进行安装。然后clone这个git仓库到你本地：
+```
+git clone https://github.com/openai/openai-quickstart-node.git
+```
+如果你不习惯于使用git，你可以直接下载这个代码压缩包：https://github.com/openai/openai-quickstart-node/archive/refs/heads/master.zip
+* 添加你的API key
+基于OpenAI API构建应用，必须先获得API key。你可以通过注册账号https://platform.openai.com/signup 来获得。
+> 译者注：OpenAI目前没有向中国大陆用户开放，因此无法注册。可尝试通过其他方式获取API key
+* 执行你的应用
+在你的项目目录下执行下面的命令用于安装依赖，然后启动你的应用执行。
+```
+npm install
+npm run dev
+```
+在你的浏览器里打开 http://localhost:3000 ，你将看到这个给宠物起名的应用。
+* 理解代码
+> 译者注：待翻译
+5. 结尾  
+6. 下一步
+# 详细指南
+# API参考
